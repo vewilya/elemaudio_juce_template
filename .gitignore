@@ -27,6 +27,3 @@ dist
 build/
 .vscode/
 libs/
-elementary/
-juce/
-choc/

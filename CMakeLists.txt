@@ -29,21 +29,21 @@ CPMAddPackage(
     NAME JUCE
     GITHUB_REPOSITORY juce-framework/JUCE
     GIT_TAG 7.0.5 
-    SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/juce
+    SOURCE_DIR ${LIB_DIR}/juce
 )
 
 CPMAddPackage(
     NAME choc
     GITHUB_REPOSITORY nick-thompson/choc
     GIT_TAG nick/edits
-    SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/choc
+    SOURCE_DIR ${LIB_DIR}/choc
 )
 
 CPMAddPackage(
     NAME elementary 
     GITHUB_REPOSITORY elemaudio/elementary
     GIT_TAG @elemaudio/core@2.0.0 
-    SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/elementary
+    SOURCE_DIR ${LIB_DIR}/elementary
 )
 
 juce_add_plugin(${TARGET_NAME}
@@ -72,7 +72,7 @@ target_sources(${TARGET_NAME}
 
 target_include_directories(${TARGET_NAME}
   PRIVATE
-  ${CMAKE_CURRENT_SOURCE_DIR}/choc/javascript)
+  ${LIB_DIR}/choc/javascript)
 
 target_compile_features(${TARGET_NAME}
   PRIVATE
