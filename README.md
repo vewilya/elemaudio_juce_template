@@ -30,7 +30,7 @@ cd ../
 mkdir -p build/MacOS/
 cd build/MacOS/
 
-cmake -DCMAKE_OSX_DEPLOYMENT_TARGET=10.15 ../..
+cmake -G Xcode -DCMAKE_OSX_DEPLOYMENT_TARGET=10.15 ../..
 cmake --build .
 ```
 
